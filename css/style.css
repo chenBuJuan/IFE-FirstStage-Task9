@@ -1,0 +1,971 @@
+/*animation begin*/
+@-webkit-keyframes cell-in{
+    0%{
+        padding-left: 5%;
+        opacity: 0;
+    }
+    100%{
+        padding-left: 10%;
+        opacity: 1;
+    }
+}
+/*animation end*/
+select{
+    height: 22px;
+    line-height: 20px;
+    font-size: 12px;
+    outline: 0;
+    box-sizing: border-box;
+    padding-left: 5px;
+    -webkit-appearance: none;
+    background: url(../images/icon-5.png) no-repeat 93% 7px;
+}
+/*css*/
+body{
+    width: 100%;
+    min-width: 1280px;
+}
+body>header{
+    width: 100%;
+    height: 56px;
+    font-size: 0px;
+    background-color: #2189bf;
+}
+body>header .icon,body>header .search,body>header .login{
+    height: 56px;
+    text-align: center;
+    line-height: 56px;
+    display: inline-block;
+}
+body>header .icon{
+    width: 56px;
+    float: left;
+    position: relative;
+    left: 4%;
+}
+body>header .icon span{
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    background: url(../images/icon-1.png) no-repeat;
+    position: relative;
+    top: 10px;
+    cursor: pointer;
+}
+body>header .search{
+    width: 400px;
+    font-size: 12px;
+    position: relative;
+    left: 55%;
+}
+body>header .search input{
+    width: 180px;
+    height: 26px;
+    border: 0;
+    outline: 0;
+    border-radius:20px;
+    box-sizing: border-box;
+    padding-left: 12%;
+    color: #aaa;
+    background: url(../images/icon-4.png) no-repeat 6% 5px,#fff;
+    
+    -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+body>header .search input:focus{
+    width: 300px;
+}
+body>header .login{
+    width: 70px;
+    color: #fff;
+    position: relative;
+    left: 55%;
+}
+body>header .login i{
+    font-size: 14px;
+    margin-right: 10px;
+}
+body>header .login span{
+    font-size: 12px;
+    cursor: pointer;
+}
+body>header .login .space{
+    width: 0px;
+    border-top: 2px solid #fff;
+    position: absolute;
+    top: 40px;
+    left: 30px;
+    
+    -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+body>header .login span:hover~.space{
+    width: 30px;
+}
+.container{
+    width: 100%;
+    font-size: 0;
+    font-family: 'Microsoft YaHei';
+    float: left;
+}
+.container .content-l{
+    width: 20%;
+    height: 1300px;
+    float: left;
+    background-color: #2B2E3D;
+}
+.container .content-l .user{
+    width: 100%;
+}
+.container .content-l .user .img{
+    width: 100%;
+    height: 80px;
+    font-size: 16px;
+    color: #E2E4E3;
+    text-align: center;
+    line-height: 80px;
+    background: url(../images/icon-2.png) no-repeat 50px 10px;
+    background-size: 60px;
+    cursor: pointer;
+    
+    -webkit-transition: color 0.5s ease-in-out;
+    -moz-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+}
+.container .content-l .user .img:hover{
+    color: #fff;
+}
+.container .content-l .user .img span{
+    margin-left: 50px;
+}
+.container .content-l .user .mes{
+    width: 100%;
+    height: 80px;
+}
+.container .content-l .user .mes .mes-l,
+.container .content-l .user .mes .mes-r{
+    width: 50%;
+    height: 40px;
+    font-size: 14px;
+    color: #586576;
+    text-align: center;
+    line-height: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    top: 20px;
+    cursor: pointer;
+    
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.container .content-l .user .mes .mes-l{
+    border-right: 1px solid #5C5F74; 
+}
+.container .content-l .user .mes .mes-r{
+    border-left: 1px solid #5C5F74; 
+}
+.container .content-l .user .mes .mes-l:hover,
+.container .content-l .user .mes .mes-r:hover{
+    color: #E2E4E3;
+}
+.container .content-l .cells{
+    width: 100%;
+    color: #586576;
+}
+.container .content-l .cells .cell-1{
+    width: 100%;
+    font-size: 15px;
+    padding-left: 15%;
+    box-sizing: border-box;
+    margin: 10px 0;
+    position: relative;
+}
+.container .content-l .cells .cell-1>input{
+    width: 85%;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.container .content-l .cells .cell-1>i{
+    width: 20px;
+    margin: 0 8px;
+    text-align: center;
+}
+.container .content-l .cells .cell-1>span{
+    display: inline-block;
+}
+.container .content-l .cells .cell-1>i,
+.container .content-l .cells .cell-1>span{
+    height: 30px;
+    line-height: 30px;
+}
+.container .content-l .cells .cell-1:hover>i,
+.container .content-l .cells .cell-1:hover>span,
+.container .content-l .cells .cell-1>input:checked~i,
+.container .content-l .cells .cell-1>input:checked~span{
+    color: #EDEDEF;
+}
+.container .content-l .cells .cell-1>input:checked~.cell-2{
+    display: block;
+    animation: cell-in 0.5s ease-in-out;
+    -webkit-animation: cell-in 0.5s ease-in-out;
+}
+.container .content-l .cells .cell-1:hover{
+    background-color: #373D4D;
+}
+.container .content-l .cells .cell-1 .cell-2{
+    width: 100%;
+    font-size: 14px;
+    display: none;
+    padding-left: 10%;
+    box-sizing: border-box;
+    position: relative;
+}
+.container .content-l .cells .cell-1 .cell-2>input{
+    width: 90%;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.container .content-l .cells .cell-1 .cell-2>i{
+    margin: 0 6px;
+    
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+.container .content-l .cells .cell-1 .cell-2>span{
+    display: inline-block;
+}
+.container .content-l .cells .cell-1 .cell-2>i,
+.container .content-l .cells .cell-1 .cell-2>span{
+    height: 30px;
+    line-height: 30px;
+}
+.container .content-l .cells .cell-1 .cell-2>input:checked+i{
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.container .content-l .cells .cell-1 .cell-2:hover>i,
+.container .content-l .cells .cell-1 .cell-2:hover>span,
+.container .content-l .cells .cell-1 .cell-2>input:checked~i,
+.container .content-l .cells .cell-1 .cell-2>input:checked~span{
+    color: #ededef;
+}
+.container .content-l .cells .cell-1 .cell-2>input:checked~.cell-3{
+    display: block;
+    animation: cell-in 0.5s ease-in-out;
+    -webkit-animation: cell-in 0.5s ease-in-out;
+}
+.container .content-l .cells .cell-1 .cell-2 .cell-3{
+    width: 100%;
+    height: 30px;
+    font-size: 13px;
+    display: none;
+    padding-left: 10%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.container .content-l .cells .cell-1 .cell-2 .cell-3>i{
+    margin: 0 4px;
+}
+.container .content-l .cells .cell-1 .cell-2 .cell-3>span{
+    display: inline-block;
+}
+.container .content-l .cells .cell-1 .cell-2 .cell-3>i,
+.container .content-l .cells .cell-1 .cell-2 .cell-3>span{
+    height: 30px;
+    line-height: 30px;
+}
+.container .content-l .cells .cell-1 .cell-2 .cell-3:hover>i,
+.container .content-l .cells .cell-1 .cell-2 .cell-3:hover>span{
+    color: #EDEDEF;
+}
+.container .content-r{
+    width: 80%;
+    height: 1300px;
+    float: right;
+    background-color: #EEEEEE;
+}
+.container .content-r>header{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #A9A9A9;
+    letter-spacing: 3px;
+    box-sizing: border-box;
+    padding-left: 30px;
+    background-color: #fff;
+}
+.container .content-r .content{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.container .content-r .content #content-1{
+    width: 100%;
+    height: 80px;
+    font-size: 13px;
+    text-align: center;
+    background-color: #fff;
+}
+.container .content-r .content #content-1>div[class^="cell-"]{
+    display: inline-block;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.container .content-r .content #content-1>div[class^="cell-"]:not(:last-of-type)>span{
+    color: #C3C3C3;
+}
+.container .content-r .content #content-1>div[class^="cell-"]:not(:last-of-type)>select{
+    color: #323232;
+    margin: 0 10px;
+}
+.container .content-r .content #content-1 .cell-1{
+    height: 80px;
+    width: 20%;
+    line-height: 80px;
+}
+.container .content-r .content #content-1 .cell-1>select{
+    width: 45%;
+}
+.container .content-r .content #content-1 .cell-2{
+    height: 80px;
+    width: 25%;
+    text-align: left;
+    line-height: 30px;
+    padding-top: 10px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    
+    background: url(../images/icon-3.png) no-repeat 88% 20px;
+}
+.container .content-r .content #content-1 .cell-2>select{
+    width: 51%;
+}
+.container .content-r .content #content-1 .cell-3{
+    height: 80px;
+    width: 40%;
+    line-height: 30px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.container .content-r .content #content-1 .cell-3>input[type="text"]{
+    width: 100px;
+    margin: 0 10px;
+    padding-left: 5px;
+}
+.container .content-r .content #content-1 .cell-3>select:nth-of-type(1){
+    width: 16%;
+}
+.container .content-r .content #content-1 .cell-3>select:nth-of-type(2){
+    width: 16%;
+}
+.container .content-r .content #content-1 .cell-3>select:nth-of-type(3){
+    width: 32%;
+}
+.container .content-r .content #content-1 .cell-4{
+    height: 80px;
+    width: 10%;
+}
+.container .content-r .content #content-1 .cell-4>span{
+    width: 65%;
+    height: 26px;
+    line-height: 26px;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+    top: 27px;
+    background-color: #3A8BC3;
+    cursor: pointer;
+    
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.container .content-r .content #content-1 .cell-4>span:hover{
+    border-radius: 5px;
+    background-color: #2A92DB;
+}
+.container .content-r .content #content-2{
+    width: 100%;
+    height: 70px;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 10px;
+}
+.container .content-r .content #content-2 .to-l,
+.container .content-r .content #content-2 .cell,
+.container .content-r .content #content-2 .to-r,
+.container .content-r .content #content-2 .history{
+    height: 70px;
+    display: inline-block;
+    background-color: #fff;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+.container .content-r .content #content-2 .to-l,
+.container .content-r .content #content-2 .to-r{
+    width: 4%;
+    color: #323232;
+    font-size: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    
+    -webkit-transition: font-size 0.5s ease-in-out;
+    -moz-transition: font-size 0.5s ease-in-out;
+    transition: font-size 0.5s ease-in-out;
+}
+.container .content-r .content #content-2 .to-l:hover,
+.container .content-r .content #content-2 .to-r:hover{
+    font-size: 45px;
+}
+.container .content-r .content #content-2 .cell{
+    width: 12%;
+    line-height: 27px;
+    padding: 5px 0;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+    
+    -webkit-transition: border-color 0.5s ease-in-out;
+    -moz-transition: border-color 0.5s ease-in-out;
+    transition: border-color 0.5s ease-in-out;
+}
+.container .content-r .content #content-2 .cell:hover{
+    border-top: 3px solid #4388C9;
+}
+.container .content-r .content #content-2 .cell>span:last-of-type{
+    font-size: 24px;
+    color: #EA6500;
+}
+.container .content-r .content #content-2 .cell>span:last-of-type>span{
+    font-size: 17px;
+    color: #ACACAC;
+}
+.container .content-r .content #content-2 .history{
+    width: 16%;
+    line-height: 70px;
+    margin-left: 3px;
+    position: relative;
+}
+.container .content-r .content #content-2 .history i{
+    font-size: 34px;
+    color: #3A89C2;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.container .content-r .content #content-2 .history span{
+    cursor: pointer;
+}
+.container .content-r .content #content-2 .history .space{
+    width: 0;
+    border-top: 2px solid #3A89C2;
+    position: absolute;
+    top: 45px;
+    left: 62px;
+    
+    -webkit-transition: width 0.5s ease-in-out;
+    -moz-transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+}
+.container .content-r .content #content-2 .history span:hover+.space{
+    width: 60px;
+}
+.container .content-r .content #content-3{
+    width: 100%;
+    height: 90px;
+    margin-top: 10px;
+}
+.container .content-r .content #content-3 .mes{
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+}
+.container .content-r .content #content-3 .cell{
+    width: 22%;
+    height: 70px;
+    font-size: 12px;
+    line-height: 26px;
+    background-color: #fff;
+    padding-top: 9px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+}
+.container .content-r .content #content-3 .cell:nth-of-type(2){
+    border-left: 4px solid #43B29F;
+}
+.container .content-r .content #content-3 .cell:nth-of-type(3){
+    border-left: 4px solid #398AC1;
+}
+.container .content-r .content #content-3 .cell:nth-of-type(4){
+    border-left: 4px solid #CF4B36;
+}
+.container .content-r .content #content-3 .cell:nth-of-type(5){
+    border-left: 4px solid #E1CD46;
+}
+.container .content-r .content #content-3 .cell .color{
+    width: 33%;
+    height: 40px;
+    position: absolute;
+    top: 15px;
+    left: 60%;
+}
+.container .content-r .content #content-3 .cell:nth-of-type(2) .color{
+    background-color: #43B29F;
+}
+.container .content-r .content #content-3 .cell:nth-of-type(3) .color{
+    background-color: #398AC1;
+}
+.container .content-r .content #content-3 .cell:nth-of-type(4) .color{
+    background-color: #CF4B36;
+}
+.container .content-r .content #content-3 .cell:nth-of-type(5) .color{
+    background-color: #E1CD46;
+}
+.container .content-r .content #content-3 .cell:nth-of-type(2){
+    margin-right: 2%;
+}
+.container .content-r .content #content-3 .cell:nth-of-type(3),
+.container .content-r .content #content-3 .cell:nth-of-type(4){
+    margin: 0 2%;
+}
+.container .content-r .content #content-3 .cell:nth-of-type(5){
+    margin-left: 2%;
+}
+.container .content-r .content #content-4{
+    width: 59%;
+    height: 400px;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    float: left;
+    background-color: #fff;
+}
+.container .content-r .content #content-4>header{
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    color: #B5B5B5;
+    font-size: 14px;
+    line-height: 40px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    background-color: #F4F5F7;
+}
+.container .content-r .content #content-4 ul{
+    width: 92%;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+.container .content-r .content #content-4 ul li{
+    width: 20%;
+    height: 30px;
+    text-align: left;
+    line-height: 30px;
+    font-size: 13px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #CBCBCB;
+    list-style: none;
+    display: inline-block;
+}
+.container .content-r .content #content-4 ul li:first-child span{
+    background-color: #fff;
+    border: 1px solid #CBCBCB;
+    border-bottom: 0;
+}
+.container .content-r .content #content-4 ul span:hover{
+    border: 1px solid #CBCBCB;
+    border-bottom: 0;
+    background-color: #fff;
+}
+.container .content-r .content #content-4 ul li span{
+    display: inline-block;
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #ECEBF0;
+    cursor: pointer;
+    
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+.container .content-r .content #content-4 table{
+    width: 92%;
+    height: 300px;
+    display: block;
+    margin-left: 20px;
+    padding: 30px;
+    border: 1px solid #CBCBCB;
+    border-top: 0;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    box-sizing: border-box;
+}
+.container .content-r .content #content-4 table tbody{
+    width: 100%;
+    display: block;
+}
+.container .content-r .content #content-4 table tr{
+    width: 100%;
+    height: 40px;
+    display: block;
+}
+.container .content-r .content #content-4 table tr td{
+    width: 25%;
+    height: 40px;
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid #D2D2D2;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.container .content-r .content #content-4 table tr td:hover{
+    background-color: #F4F5F7;
+}
+.container .content-r .content #content-5{
+    width: 39%;
+    height: 400px;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    float: right;
+    background-color: #fff;
+}
+.container .content-r .content #content-5>header{
+    width: 100%;
+    height: 40px;
+    color: #B5B5B5;
+    font-size: 14px;
+    line-height: 40px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    background-color: #F4F5F7;
+}
+.container .content-r .content #content-5 div[class^="cell-"]{
+    width: 80%;
+    margin: 0 auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.container .content-r .content #content-5 div[class^="cell-"] span:first-of-type{
+    color: #C3C3C3;
+}
+.container .content-r .content #content-5 .cell-1{
+    height: 50px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.container .content-r .content #content-5 .cell-2{
+    height: 60px;
+    font-size: 0;
+}
+.container .content-r .content #content-5 .cell-2 div[class^="mes-"]{
+    display: inline-block;
+}
+.container .content-r .content #content-5 .cell-2 .mes-l{
+    width: 35%;
+    height: 50px;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #C3C3C3;
+    border-left: 0;
+}
+.container .content-r .content #content-5 .cell-2 .mes-r{
+    width: 65%;
+    height: 50px;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border: 1px solid #C3C3C3;
+    border-left: 0;
+    border-right: 0;
+}
+.container .content-r .content #content-5 .cell-3{
+    height: 200px;
+    font-size: 13px;
+    border-bottom: 1px solid #C3C3C3;
+}
+.container .content-r .content #content-5 .cell-4{
+    height: 30px;
+    line-height: 20px;
+    font-size: 13px;
+}
+.container .content-r .content #content-5 .cell-4 input[type="checkbox"]{
+    width: 14px;
+    height: 14px;
+    border: 0;
+    outline: 0;
+    vertical-align: middle;
+}
+.container .content-r .content #content-5 .cell-4 span:last-of-type{
+    width: 18%;
+    height: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+    display: inline-block;
+    float: right;
+    background-color: #388BC1;
+    cursor: pointer;
+    
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.container .content-r .content #content-5 .cell-4 span:last-of-type:hover{
+    border-radius: 5px;
+    background-color: #2A92DB;
+}
+.container .content-r .content #content-6{
+    width: 42%;
+    height: 400px;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    float: left;
+    background-color: #fff;
+}
+.container .content-r .content #content-6>header{
+    width: 100%;
+    height: 40px;
+    color: #B5B5B5;
+    font-size: 14px;
+    line-height: 40px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    background-color: #F4F5F7;
+}
+.container .content-r .content #content-6 .mes,
+.container .content-r .content #content-6 .date{
+    width: 90%;
+    margin: 0 auto;
+}
+.container .content-r .content #content-6 .mes{
+    height: 22px;
+    margin-top: 10px;
+}
+.container .content-r .content #content-6 .mes>select{
+    margin-right: 1%;
+    vertical-align: middle;
+}
+.container .content-r .content #content-6 .mes>select:nth-of-type(1){
+    width: 26%;
+}
+.container .content-r .content #content-6 .mes>select:nth-of-type(2){
+    width: 16%;
+}
+.container .content-r .content #content-6 .mes>select:nth-of-type(3){
+    width: 30%;
+}
+.container .content-r .content #content-6 .mes>span{
+    width: 24%;
+    height: 22px;
+    font-size: 13px;
+    line-height: 22px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+.container .content-r .content #content-6 .date{
+    margin-top: 10px;
+}
+.container .content-r .content #content-6 .date>header{
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    border-top: 2px solid #A8CFEC;
+    border-bottom: 2px solid #E1E1E1;
+}
+.container .content-r .content #content-6 .date>header span{
+    width: 14.2857143%;
+    height: 30px;
+    font-size: 13px;
+    line-height: 26px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.container .content-r .content #content-6 .date .cells{
+    width: 100%;
+    height: 250px;
+}
+.container .content-r .content #content-6 .date .cells .cell{
+    width: 14.2857143%;
+    height: 50px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    padding: 5px 0;
+    display: inline-block;
+    cursor: pointer;
+}
+.container .content-r .content #content-6 .date .cells .cell:hover{
+    border: 1px solid #F5C72C;
+}
+.container .content-r .content #content-6 .date .cells .cell:nth-of-type(1){
+    margin-left: 57.1428572%;
+}
+.container .content-r .content #content-6 .date .cells .cell:nth-of-type(1)>span:last-of-type,
+.container .content-r .content #content-6 .date .cells .cell:nth-of-type(2)>span:first-of-type,
+.container .content-r .content #content-6 .date .cells .cell:nth-of-type(3)>span:first-of-type,
+.container .content-r .content #content-6 .date .cells .cell:nth-of-type(5)>span:last-of-type,
+.container .content-r .content #content-6 .date .cells .cell:nth-of-type(9)>span:first-of-type,
+.container .content-r .content #content-6 .date .cells .cell:nth-of-type(10)>span:first-of-type,
+.container .content-r .content #content-6 .date .cells .cell:nth-of-type(16)>span:first-of-type,
+.container .content-r .content #content-6 .date .cells .cell:nth-of-type(17)>span:first-of-type,
+.container .content-r .content #content-6 .date .cells .cell:nth-of-type(23)>span:first-of-type,
+.container .content-r .content #content-6 .date .cells .cell:nth-of-type(24)>span:first-of-type,
+.container .content-r .content #content-6 .date .cells .cell:nth-of-type(30)>span:first-of-type{
+    color: #f00;
+}
+.container .content-r .content #content-7{
+    width: 56%;
+    height: 400px;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    float: right;
+    background-color: #fff;
+}
+.container .content-r .content #content-7>header{
+    width: 100%;
+    height: 40px;
+    color: #B5B5B5;
+    font-size: 14px;
+    line-height: 40px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    background-color: #F4F5F7;
+}
+.container .content-r .content #content-7 .cells{
+    width: 85%;
+    height: 330px;
+    margin: 10px auto 0;
+    border-bottom: 1px solid #B5B5B5;
+}
+.container .content-r .content #content-7 .cells .row{
+    cursor: pointer;
+}
+.container .content-r .content #content-7 .cells .row:hover{
+    background-color: #F3F4F6;
+}
+.container .content-r .content #content-7 .cells .row .cell-1,
+.container .content-r .content #content-7 .cells .row .cell-2,
+.container .content-r .content #content-7 .cells .row .cell-3{
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    box-sizing: border-box;
+    border: 1px solid #B5B5B5;
+    display: inline-block;
+}
+.container .content-r .content #content-7 .cells .row:first-child .cell-1,
+.container .content-r .content #content-7 .cells .row:first-child .cell-2,
+.container .content-r .content #content-7 .cells .row:first-child .cell-3{
+    font-size: 13px;
+}
+.container .content-r .content #content-7 .cells .row .cell-1{
+    width: 15%;
+    text-align: center;
+    border-right: 0;
+    border-bottom: 0;
+}
+.container .content-r .content #content-7 .cells .row .cell-2{
+    width: 15%;
+    text-align: center;
+    border-bottom: 0;
+}
+.container .content-r .content #content-7 .cells .row .cell-3{
+    width: 70%;
+    padding-left: 20px;
+    border-left: 0;
+    border-bottom: 0;
+}
+.container .content-r .content #content-7 .cells .row:not(:first-child) .cell-3 .colors{
+    width: 65%;
+    height: 5px;
+    vertical-align: middle;
+    margin-left: 10px;
+    display: inline-block;
+    background-color: #B5B5B5;
+}
+.container .content-r .content #content-7 .cells .row:nth-of-type(2) .cell-3 .colors .color{
+    width: 80%;
+    height: 5px;
+    background-color: #EE6E51;
+}
+.container .content-r .content #content-7 .cells .row:nth-of-type(3) .cell-3 .colors .color{
+    width: 70%;
+    height: 5px;
+    background-color: #EF8150;
+}
+.container .content-r .content #content-7 .cells .row:nth-of-type(4) .cell-3 .colors .color{
+    width: 60%;
+    height: 5px;
+    background-color: #F19E4E;
+}
+.container .content-r .content #content-7 .cells .row:nth-of-type(5) .cell-3 .colors .color{
+    width: 55%;
+    height: 5px;
+    background-color: #7FCAF1;
+}
+.container .content-r .content #content-7 .cells .row:nth-of-type(6) .cell-3 .colors .color{
+    width: 50%;
+    height: 5px;
+    background-color: #7FCAF1;
+}
+.container .content-r .content #content-7 .cells .row:nth-of-type(7) .cell-3 .colors .color{
+    width: 45%;
+    height: 5px;
+    background-color: #7FCAF1;
+}
+.container .content-r .content #content-7 .cells .row:nth-of-type(8) .cell-3 .colors .color{
+    width: 40%;
+    height: 5px;
+    background-color: #7FCAF1;
+}
+.container .content-r .content #content-7 .cells .row:nth-of-type(9) .cell-3 .colors .color{
+    width: 35%;
+    height: 5px;
+    background-color: #7FCAF1;
+}
+.container .content-r .content #content-7 .cells .row:nth-of-type(10) .cell-3 .colors .color{
+    width: 30%;
+    height: 5px;
+    background-color: #7FCAF1;
+}
+.container .content-r .content #content-7 .cells .row:nth-of-type(11) .cell-3 .colors .color{
+    width: 25%;
+    height: 5px;
+    background-color: #7FCAF1;
+}
