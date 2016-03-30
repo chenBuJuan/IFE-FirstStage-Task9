@@ -95,7 +95,7 @@ body>header .login .space{
     border-top: 2px solid #fff;
     position: absolute;
     top: 40px;
-    left: 30px;
+    left: 43%;
     
     -webkit-transition: width 0.5s ease-in-out;
     -moz-transition: width 0.5s ease-in-out;
@@ -360,7 +360,7 @@ body>header .login span:hover~.space{
     box-sizing: border-box;
 }
 .container .content-r .content #content-1 .cell-3>input[type="text"]{
-    width: 100px;
+    width: 29.5%;
     margin: 0 10px;
     padding-left: 5px;
 }
@@ -399,7 +399,7 @@ body>header .login span:hover~.space{
 .container .content-r .content #content-2{
     width: 100%;
     height: 70px;
-    font-size: 13px;
+    font-size: 0;
     text-align: center;
     margin-top: 10px;
 }
@@ -408,6 +408,7 @@ body>header .login span:hover~.space{
 .container .content-r .content #content-2 .to-r,
 .container .content-r .content #content-2 .history{
     height: 70px;
+    font-size: 13px;
     display: inline-block;
     background-color: #fff;
     vertical-align: top;
@@ -418,6 +419,7 @@ body>header .login span:hover~.space{
     width: 4%;
     color: #323232;
     font-size: 40px;
+    margin-right: 0.5%;
     line-height: 70px;
     cursor: pointer;
     
@@ -432,6 +434,7 @@ body>header .login span:hover~.space{
 .container .content-r .content #content-2 .cell{
     width: 12%;
     line-height: 27px;
+    margin-right: 0.5%;
     padding: 5px 0;
     border-top: 3px solid #fff;
     cursor: pointer;
@@ -454,7 +457,6 @@ body>header .login span:hover~.space{
 .container .content-r .content #content-2 .history{
     width: 16%;
     line-height: 70px;
-    margin-left: 3px;
     position: relative;
 }
 .container .content-r .content #content-2 .history i{
@@ -471,7 +473,7 @@ body>header .login span:hover~.space{
     border-top: 2px solid #3A89C2;
     position: absolute;
     top: 45px;
-    left: 62px;
+    left: 45%;
     
     -webkit-transition: width 0.5s ease-in-out;
     -moz-transition: width 0.5s ease-in-out;
